@@ -41,10 +41,12 @@ export async function createTodo(
 export async function updateTodo(
   updateTodoRequest: UpdateTodoRequest,
   userId: string, todoId: string
-): Promise<TodoUpdate> {
+
+  ): Promise<TodoUpdate> {
 
 
-  const result =  await todoAccess.updateTodo({
+  
+    const result =  await todoAccess.updateTodo({
     name: updateTodoRequest.name,
     dueDate: updateTodoRequest.dueDate,
     done: updateTodoRequest.done
